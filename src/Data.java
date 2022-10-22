@@ -18,7 +18,7 @@ public class Data {
         if (!validate(password)) {
             throw new WrongPasswordException("Некорректный пароль");
         }
-        if (!validate((confirmPassword))) {
+        if (!validate(confirmPassword)) {
             throw new WrongPasswordException("Некорректный пароль");
         }
         if (!password.equals(confirmPassword)) {
@@ -29,6 +29,7 @@ public class Data {
     }
 
     private static boolean validate(String l) {
+
         if (l.length() > 20) {
             return false;
         }
